@@ -9,9 +9,9 @@
       community.general.timezone:
         name: Etc/UTC
 
-#- name: Set timezone
-#  timezone:
-#    name: Etc/UTC
+- name: Set timezone
+  timezone:
+    name: Etc/UTC
 
 - name: Set hostname
   command: hostnamectl set-hostname {{ inventory_hostname }}
