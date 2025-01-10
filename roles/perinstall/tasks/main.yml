@@ -15,28 +15,27 @@
     
 #- name: Set hostname
 #  command: hostnamectl set-hostname {{ inventory_hostname }}
+#
 #- name: Add hostname to /etc/hosts
 #  lineinfile:
-#    path: /etc/hosts
-#    regexp: '^127\.0\.1\.1'
-#    line: '127.0.1.1 {{ inventory_hostname}} localhost'
+#    path: "{{ etc_hosts_path }}"
+#    regexp: '^192\.168\.73\.161'
+#    line: '192.168.73.161 {{ inventory_hostname}} localhost'
 #    owner: root
 #    group: root
 #    mode: 0644
 #
-#- name: Set hostname
-#  command: hostnamectl set-hostname {{ inventory_hostname }}
-#- name: Add hostname to /etc/hosts
+#- name: Add hostname to /etc/hosts (second entry)
 #  lineinfile:
-#    path: /etc/hosts
-#    regexp: '^127\.0\.0\.1'
-#    line: '127.0.0.1 {{ inventory_hostname}} localhost'
+#    path: "{{ etc_hosts_path }}"
+#    regexp: '^192\.168\.73\.160'
+#    line: '192.168.73.160 {{ inventory_hostname}} localhost'
 #    owner: root
 #    group: root
 #    mode: 0644
 #
 #
-#- name: Set timezone
+# name: Set timezone
 #  command: timedatectl set-timezone Etc/UTC
 #
 #- name: Set hostname
