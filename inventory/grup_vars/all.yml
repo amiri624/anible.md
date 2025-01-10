@@ -1,0 +1,4 @@
+# asible hosts vars
+
+etc_hosts_path: "/etc/hosts"  
+
