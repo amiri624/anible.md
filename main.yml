@@ -1,5 +1,3 @@
-# asible hosts vars
-
 etc_hosts_path: "et"/etc/hosts"
 issue_net_path: "/etc/issue.n
 
