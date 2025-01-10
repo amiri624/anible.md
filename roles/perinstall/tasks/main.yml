@@ -1,17 +1,17 @@
 ---
 # tasks file for perinstall
 
-#- name: Set timezone
-#  hosts: all
-#  become: yes
-#  tasks:
-#    - name: Set timezone
-#      community.general.timezone:
-#        name: Etc/UTC
-
 - name: Set timezone
-  timezone:
-    name: Etc/UTC
+  hosts: all
+  become: yes
+  tasks:
+    - name: Set timezone
+      community.general.timezone:
+        name: Etc/UTC
+
+#- name: Set timezone
+#  timezone:
+#    name: Etc/UTC
 
 - name: Set hostname
   command: hostnamectl set-hostname {{ inventory_hostname }}
