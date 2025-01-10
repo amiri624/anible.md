@@ -1,2 +1,43 @@
 ---
 # tasks file for perinstall
+
+- name: Set timezone
+  hosts: all
+  become: yes
+  tasks:
+    - name: Set timezone
+      community.general.timezone:
+        name: Etc/UTC
+
+#- name: Set timezone
+#  timezone:
+#    name: Etc/UTC
+    
+#- name: Set hostname
+#  command: hostnamectl set-hostname {{ inventory_hostname }}
+#- name: Add hostname to /etc/hosts
+#  lineinfile:
+#    path: /etc/hosts
+#    regexp: '^127\.0\.1\.1'
+#    line: '127.0.1.1 {{ inventory_hostname}} localhost'
+#    owner: root
+#    group: root
+#    mode: 0644
+#
+#- name: Set hostname
+#  command: hostnamectl set-hostname {{ inventory_hostname }}
+#- name: Add hostname to /etc/hosts
+#  lineinfile:
+#    path: /etc/hosts
+#    regexp: '^127\.0\.0\.1'
+#    line: '127.0.0.1 {{ inventory_hostname}} localhost'
+#    owner: root
+#    group: root
+#    mode: 0644
+#
+#
+#- name: Set timezone
+#  command: timedatectl set-timezone Etc/UTC
+#
+#- name: Set hostname
+#  command: hostnamectl set-hostname {{ inventory_hostname }}
