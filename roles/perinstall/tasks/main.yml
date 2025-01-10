@@ -48,3 +48,6 @@
     state: present
     update_cache: yes
 
+- name: Copy issue.net
+  dest: /etc/issue.net
+
