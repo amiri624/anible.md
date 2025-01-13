@@ -1,6 +1,6 @@
 server {
 
-  listen 80;
+  listen {{ nginx_http_port }}
 
   server_name example.com;
 
@@ -11,7 +11,7 @@ server {
 
 server {
 
-  listen 443 ssl;
+  listen {{ nginx_https_port }} ssl;
 
   server_name example.com;
 
