@@ -7,7 +7,6 @@ dns_server_1: "1.1.1.1"
 dns_server_2: "2.2.2.2"
 
 # Nginx setting
-
 nginx_http_port: "8080"
 nginx_https_port: "6443"
 nginx_server_name: "bmi.ir"
@@ -15,7 +14,6 @@ ssl: true
 infra_env: "development"
 
 #### for loop
-
 my_value:
   - name
   - age
@@ -23,7 +21,7 @@ my_value:
   - city
   - country
   - phone
-
+  
 
 my_variable:
   - name: john
