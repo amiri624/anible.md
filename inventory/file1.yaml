@@ -1,4 +1,5 @@
 # file1.yaml
+
 ---
 - name: Install nginx on server
   hosts: all
